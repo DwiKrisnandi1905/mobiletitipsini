@@ -135,7 +135,7 @@
         <p>Nikmati pengalaman menitipkan barang<br>yang lebih nyaman dengan titipsini.com</p>
     </div>
     <button class="button-daftar" type="button" onclick="window.location='{{ route('register.loading') }}'">Daftar</button>
-    <button class="button-masuk" type="button">Masuk</button>
+    <button class="button-masuk" type="button" onclick="window.location='{{ route('login.loading') }}'">Masuk</button>
   </div>
 </body>
 </html>
