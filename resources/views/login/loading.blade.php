@@ -18,11 +18,15 @@
 .loading-container {
     text-align: center;
 }
+.loading-animated {
+        width: 300px; 
+        height: auto; 
+}
 
 </style>
 <body>
     <div class="loading-container">
-        <h1>Loading...</h1>
+        <img class="loading-animated" src="{{ asset('img/loading.gif') }}" alt="Gambarimage" data-aos="fade-right" data-aos-duration="1000">
     </div>
 
     <script>
