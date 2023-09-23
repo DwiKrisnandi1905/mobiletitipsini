@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingpageController;
+use App\Http\Controllers\DaftarController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +15,13 @@ use App\Http\Controllers\LandingpageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*splash screen*/
 Route::get('/', [LandingpageController::class, 'landingpage'])->name('landingpage.splashscreen');
 Route::get('/onboarding', [LandingpageController::class, 'onboarding'])->name('landingpage.onboarding');
+
+/*daftar*/
+Route::get('/loading', [DaftarController::class, 'loading'])->name('register.loading');
+Route::get('/daftar', [DaftarController::class, 'daftar'])->name('register.daftar');
+
+
 

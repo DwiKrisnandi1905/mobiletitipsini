@@ -111,7 +111,15 @@
     .container-onboarding {
         max-width: 110.7%;
         margin-left: -15px;
-    }  
+        height: 0px;
+        min-height: 100vh;
+    }
+    .image-logo {
+    margin-top: 0px;
+    }
+    .container-boxes {
+    margin-top: 50px;
+}
 }
 </style>
 <body>
@@ -126,7 +134,7 @@
         <h1>Bingung mau nitip<br>barang dimana?</h1>
         <p>Nikmati pengalaman menitipkan barang<br>yang lebih nyaman dengan titipsini.com</p>
     </div>
-    <button class="button-daftar" type="button">Daftar</button>
+    <button class="button-daftar" type="button" onclick="window.location='{{ route('register.loading') }}'">Daftar</button>
     <button class="button-masuk" type="button">Masuk</button>
   </div>
 </body>
