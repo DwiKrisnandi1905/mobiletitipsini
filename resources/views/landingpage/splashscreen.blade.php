@@ -105,7 +105,7 @@
     <script>
         setTimeout(() => {
             window.location.href = "{{ route('landingpage.onboarding') }}";
-        }, 3500);
+        }, 4000);
     </script>
 </body>
 </html>
