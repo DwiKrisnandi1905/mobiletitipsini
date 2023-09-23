@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DaftarController extends Controller
 {
-    public function loading()
+    public function loadingdaftar()
     {
         return view('register.loading', [
             'title' => 'Loading',

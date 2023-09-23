@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingpageController;
 use App\Http\Controllers\DaftarController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -20,8 +21,12 @@ Route::get('/', [LandingpageController::class, 'landingpage'])->name('landingpag
 Route::get('/onboarding', [LandingpageController::class, 'onboarding'])->name('landingpage.onboarding');
 
 /*daftar*/
-Route::get('/loading', [DaftarController::class, 'loading'])->name('register.loading');
+Route::get('/loadingdaftar', [DaftarController::class, 'loadingdaftar'])->name('register.loading');
 Route::get('/daftar', [DaftarController::class, 'daftar'])->name('register.daftar');
+
+/*masuk*/
+Route::get('/loadinglogin', [LoginController::class, 'loadinglogin'])->name('login.loading');
+Route::get('/masuk', [LoginController::class, 'masuk'])->name('login.masuk');
 
 
 

@@ -31,7 +31,7 @@
 
     <script>
         setTimeout(function() {
-            window.location.href = "{{ route('register.daftar') }}";
+            window.location.href = "{{ route('login.masuk') }}";
         }, 1000); 
     </script>
 </body>

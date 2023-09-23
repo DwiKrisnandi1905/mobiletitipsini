@@ -12,6 +12,7 @@
 </head>
 <style>
     .container-onboarding {
+<<<<<<< HEAD
         margin: -10px auto;
         max-width: 375px;
         width: 110.7%;
@@ -21,6 +22,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+=======
+        max-width: 104%;
+        margin-left: -8px;
+        height: 0px;
+        min-height: 100vh;
+>>>>>>> ffe71af037d55a1dea870444a28044885979707f
     }
 
     .image-logo {
@@ -137,8 +144,18 @@
         </button>
         <button class="button-masuk fw-bold" type="button">Masuk</button>
     </div>
+<<<<<<< HEAD
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+=======
+    <div class="deskripsi">
+        <h1>Bingung mau nitip<br>barang dimana?</h1>
+        <p>Nikmati pengalaman menitipkan barang<br>yang lebih nyaman dengan titipsini.com</p>
+    </div>
+    <button class="button-daftar" type="button" onclick="window.location='{{ route('register.loading') }}'">Daftar</button>
+    <button class="button-masuk" type="button" onclick="window.location='{{ route('login.loading') }}'">Masuk</button>
+  </div>
+>>>>>>> ffe71af037d55a1dea870444a28044885979707f
 </body>
 
 </html>
