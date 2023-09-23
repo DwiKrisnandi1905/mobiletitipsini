@@ -111,7 +111,15 @@
     .container-onboarding {
         max-width: 110.7%;
         margin-left: -15px;
-    }  
+        height: 0px;
+        min-height: 100vh;
+    }
+    .image-logo {
+    margin-top: 0px;
+    }
+    .container-boxes {
+    margin-top: 50px;
+}
 }
 </style>
 <body>
