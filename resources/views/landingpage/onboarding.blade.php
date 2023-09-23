@@ -109,8 +109,8 @@
 
 @media screen and (max-width: 768px) {
     .container-onboarding {
-        max-width: 110.7%;
-        margin-left: -15px;
+        max-width: 104%;
+        margin-left: -8px;
         height: 0px;
         min-height: 100vh;
     }
