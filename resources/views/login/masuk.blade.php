@@ -62,14 +62,14 @@
         <div class="container p-4">
             <div class="form-group">
                 <label for="email" class="form-label fw-bold">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" value="" placeholder="Masukkan Email" required>
+                <input type="email" id="email" name="email" class="form-control" value="" placeholder="Masukkan Email" style="background-color: #e8f0fe;" required>
             </div>
             <div class="form-group mt-3">
                 <label for="password" class="form-label fw-bold">
                     Kata Sandi:
                 </label>
                 <div class="input-group">
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Masukkan Password" style="border-right: none;" required>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Masukkan Password" style="border-right: none; background-color: #e8f0fe;" required>
                     <span class="input-group-text" style="border-left: none; background-color: #e8f0fe;">
                         <i id="togglePassword" class="bi bi-eye-slash"></i>
                     </span>
