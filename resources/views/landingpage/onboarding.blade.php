@@ -127,11 +127,11 @@
 
 <body>
     <div class="container-onboarding">
-        <img class="image-logo" src="{{ asset('img/onboarding1.svg') }}" alt="Gambarimage" data-aos="fade-right" data-aos-duration="1000">
+        <img class="image-logo" src="{{ asset('img/onboarding1.svg') }}" alt="Gambarimage" id="logoImage">
         <div class="container-boxes">
-            <div class="box" style="background-color: #068113;"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="box" id="box1" style="background-color: #068113;"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
         </div>
         <div class="deskripsi">
             <h1>Bingung mau nitip<br>barang dimana?</h1>
@@ -149,8 +149,34 @@
                 Masuk
         </button>
       </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+      <script>
+        const box1 = document.getElementById('box1');
+        const box2 = document.getElementById('box2');
+        const box3 = document.getElementById('box3');
+        const logoImage = document.getElementById('logoImage');
+
+        box1.addEventListener('click', function () {
+            box1.style.backgroundColor = '#068113';
+            box2.style.backgroundColor = '#D4DBEA';
+            box3.style.backgroundColor = '#D4DBEA';
+            logoImage.src = "{{ asset('img/onboarding1.svg') }}";
+        });
+        box2.addEventListener('click', function () {
+            box2.style.backgroundColor = '#068113';
+            box1.style.backgroundColor = '#D4DBEA';
+            box3.style.backgroundColor = '#D4DBEA';
+            logoImage.src = "{{ asset('img/onboarding2.svg') }}";
+        });
+        box3.addEventListener('click', function () {
+            box3.style.backgroundColor = '#068113';
+            box1.style.backgroundColor = '#D4DBEA';
+            box2.style.backgroundColor = '#D4DBEA';
+            logoImage.src = "{{ asset('img/onboarding3.svg') }}";
+        });
+    </script>
     </body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 </html>
