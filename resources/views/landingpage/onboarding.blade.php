@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,8 +121,7 @@
             margin-top: 50px;
         }
     }
-</style>
-
+</style> 
 <body>
     <div class="container-onboarding">
         <img class="image-logo" src="{{ asset('img/onboarding1.svg') }}" alt="Gambarimage" id="logoImage">
@@ -136,10 +134,16 @@
             <h1 id="heading">Bingung mau nitip<br>barang dimana?</h1>
             <p id="paragraf">Nikmati pengalaman menitipkan barang<br>yang lebih nyaman dengan titipsini.com</p>
         </div>
-        <button class="button-daftar" type="button" onclick="window.location=`{{ route('register.loading') }}`">
+        <button 
+            class="button-daftar fw-bold" 
+            type="button" 
+            onclick="window.location=`{{ route('register.loading') }}`">
             Daftar
         </button>
-        <button class="button-masuk" type="button" onclick="window.location=`{{ route('login.loading') }}`">
+        <button 
+            class="button-masuk fw-bold" 
+            type="button" 
+            onclick="window.location=`{{ route('login.loading') }}`">
             Masuk
         </button>
     </div>
@@ -179,6 +183,4 @@
         });
     </script>
 </body>
-
-
 </html>
