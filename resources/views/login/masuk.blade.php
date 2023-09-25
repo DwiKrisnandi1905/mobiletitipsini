@@ -82,7 +82,7 @@
                 <a href="" class="button-masuk" style="font-weight: bold">Masuk</a>
             </div>
             <div class="form-group mt-4 text-center">
-                <p>Belum punya akun? <a href="" style="text-decoration: none; color:#068113;">Daftar Disini!</a></p>
+                <p>Belum punya akun? <a href=" {{ route('register.daftar') }}" style="text-decoration: none; color:#068113;">Daftar Disini!</a></p>
             </div>
         </div>
     </form>
