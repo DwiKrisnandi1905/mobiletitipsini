@@ -55,8 +55,8 @@
         </a>
         <h1 class="fs-6 fw-bold" style="margin-left: 100px; margin-top: 8px;">Masuk</h1>
     </nav>
-    <div class="d-flex p-4 justify-content-center">
-        <img src="{{ asset('img/logo1.png') }}">
+    <div class="d-flex pt-5 pb-4 justify-content-center">
+        <img src="{{ asset('img/Logo2.svg') }}">
     </div>
     <form action="" method="POST">
         <div class="container p-4">
@@ -71,7 +71,7 @@
                 <div class="input-group">
                     <input type="password" id="password" name="password" class="form-control" placeholder="Masukkan Password" style="border-right: none; background-color: #e8f0fe;" required>
                     <span class="input-group-text" style="border-left: none; background-color: #e8f0fe;">
-                        <i id="togglePassword" class="bi bi-eye-slash"></i>
+                        <i id="togglePassword" class="bi bi-eye-slash" style="color: gray;"></i>
                     </span>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                 <a href="" class="button-masuk" style="font-weight: bold">Masuk</a>
             </div>
             <div class="form-group mt-4 text-center">
-                <p>Belum punya akun? <a href=" {{ route('register.daftar') }}" style="text-decoration: none; color:#068113;">Daftar Disini!</a></p>
+                <p>Belum punya akun? <a href=" {{ route('register.daftar') }}" style="text-decoration: none; color:#068113; font-weight: bold;">Daftar Disini!</a></p>
             </div>
         </div>
     </form>
