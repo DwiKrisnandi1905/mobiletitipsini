@@ -8,11 +8,10 @@
     <link rel="icon" href="{{ asset('img/logo1.png') }}" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <title>splash screen</title>
+    <title>onBoarding</title>
 </head>
 <style>
     .container-onboarding {
-
         margin: -10px auto;
         max-width: 375px;
         width: 110.7%;
@@ -134,49 +133,52 @@
             <div class="box" id="box3"></div>
         </div>
         <div class="deskripsi">
-            <h1>Bingung mau nitip<br>barang dimana?</h1>
-            <p>Nikmati pengalaman menitipkan barang<br>yang lebih nyaman dengan titipsini.com</p>
+            <h1 id="heading">Bingung mau nitip<br>barang dimana?</h1>
+            <p id="paragraf">Nikmati pengalaman menitipkan barang<br>yang lebih nyaman dengan titipsini.com</p>
         </div>
-        <button 
-            class="button-daftar" 
-            type="button" 
-            onclick="window.location=`{{ route('register.loading') }}`">
-                Daftar
+        <button class="button-daftar" type="button" onclick="window.location=`{{ route('register.loading') }}`">
+            Daftar
         </button>
-        <button 
-            class="button-masuk" 
-            type="button" onclick="window.location=`{{ route('login.loading') }}`">
-                Masuk
+        <button class="button-masuk" type="button" onclick="window.location=`{{ route('login.loading') }}`">
+            Masuk
         </button>
-      </div>
-      
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-      <script>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
         const box1 = document.getElementById('box1');
         const box2 = document.getElementById('box2');
         const box3 = document.getElementById('box3');
+        const heading = document.getElementById('heading');
+        const paragraf = document.getElementById('paragraf');
         const logoImage = document.getElementById('logoImage');
 
-        box1.addEventListener('click', function () {
+        box1.addEventListener('click', function() {
             box1.style.backgroundColor = '#068113';
             box2.style.backgroundColor = '#D4DBEA';
             box3.style.backgroundColor = '#D4DBEA';
+            heading.innerHTML = 'Bingung mau nitip<br>barang dimana?';
+            paragraf.innerHTML = 'Nikmati pengalaman menitipkan barang<br>yang lebih nyaman dengan titipsini.com';
             logoImage.src = "{{ asset('img/onboarding1.svg') }}";
         });
-        box2.addEventListener('click', function () {
+        box2.addEventListener('click', function() {
             box2.style.backgroundColor = '#068113';
             box1.style.backgroundColor = '#D4DBEA';
             box3.style.backgroundColor = '#D4DBEA';
+            heading.innerHTML = 'Bukan Hanya<br>Penitipan Barang!';
+            paragraf.innerHTML = 'Kami Juga menawarkan solusi penitipan<br>kendaraan dan bangunan Kamu';
             logoImage.src = "{{ asset('img/onboarding2.svg') }}";
         });
-        box3.addEventListener('click', function () {
+        box3.addEventListener('click', function() {
             box3.style.backgroundColor = '#068113';
             box1.style.backgroundColor = '#D4DBEA';
             box2.style.backgroundColor = '#D4DBEA';
+            heading.innerHTML = 'Tersedia di Berbagai<br>Kota di Indonesia';
+            paragraf.innerHTML = 'Kamu dapat dengan mudah menemukan<br>layanan terdekat di daerah Kamu Sendiri';
             logoImage.src = "{{ asset('img/onboarding3.svg') }}";
         });
     </script>
-    </body>
+</body>
 
 
 </html>
