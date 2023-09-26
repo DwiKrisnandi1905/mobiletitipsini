@@ -27,6 +27,7 @@
             height: 0px;
             min-height: 100vh;
         }
+        
         .image-logo2 {
             margin-top: -100px;
             margin-bottom: 30px;
