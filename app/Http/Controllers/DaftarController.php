@@ -16,7 +16,7 @@ class DaftarController extends Controller
     public function daftar()
     {
         return view('register.daftar', [
-            'title' => 'daftar',
+            'title' => 'Daftar',
         ]);
     }
 }

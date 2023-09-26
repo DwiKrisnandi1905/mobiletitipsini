@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <title>Login</title>
+    <title>{{ $title }}</title>
 </head>
 <style>
     body {
@@ -17,29 +17,43 @@
     }
 
     @media screen and (max-width: 768px) {
-        .navbar-login {
-            display: flex;
-            width: 390px;
-            height: 50px;
-            padding: 0px 32px 0px 24px;
-            align-items: center;
-            gap: 32px;
-            border-bottom: 1px solid #ccc;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        .topbar {
+            background-color: #FFF; 
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+            padding: 5px 0; 
+            color:#000; 
+            text-align: center;
+            position: relative;
         }
 
-        .button-masuk {
-            display: flex;
-            height: 48px;
-            padding: 8px 16px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            align-self: stretch;
+        .topbar p {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            margin-top: 5px; 
+            margin-bottom: 5px;
+        }
+
+        .topbar .expand-left {
+            position: absolute; 
+            left: 6%; 
+            top: 50%; 
+            transform: translateY(-50%); 
+        }
+
+        .btnMasuk {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
             border-radius: 8px;
             background: var(--primary-500, #068113);
-            text-decoration: none;
-            color: white;
+            margin-top: 20px;
+            width: 100%;
+            font-weight: bold;
         }
 
         .button-masuk:hover {
@@ -49,20 +63,25 @@
 </style>
 
 <body>
-    <nav class="navbar-login">
-        <a href="{{ route('landingpage.onboarding') }}" style="color: black">
-            <i class="bi bi-chevron-left"></i>
+    <div class="topbar">
+        <a href="{{ route('landingpage.onboarding') }}">
+            <img src="{{ asset('img/Expand_left.svg') }}" alt="Gambar Kiri" class="expand-left">
         </a>
-        <h1 class="fs-6 fw-bold" style="margin-left: 100px; margin-top: 8px;">Masuk</h1>
-    </nav>
+        <p>{{ $title }}</p>
+    </div>
     <div class="d-flex pt-5 pb-4 justify-content-center">
         <img src="{{ asset('img/Logo2.svg') }}">
     </div>
-    <form action="" method="POST">
+    <form>
         <div class="container p-4">
             <div class="form-group">
                 <label for="email" class="form-label fw-bold">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Masukkan Email" style="background-color: #e8f0fe;" required>
+                <div class="input-group">
+                    <span class="input-group-text" style="border-right: none; background-color: #e8f0fe;">
+                        <i class="bi bi-envelope" style="color: gray;"></i>
+                    </span>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Masukkan Email" style="background-color: #e8f0fe; border-left: none;" required>
+                </div>
             </div>
             <div class="form-group mt-3">
                 <label for="password" class="form-label fw-bold">
@@ -76,14 +95,9 @@
                 </div>
             </div>
             <div class="form-group mt-3">
-                <a href="" style="color: #068113; float: right; text-decoration: none;">Lupa Kata Sandi?</a>
+                <a href="{{ route('forgot.index') }}" style="color: #068113; float: right; text-decoration: none;">Lupa Kata Sandi?</a>
             </div>
-            <div class="form-group" style="margin-top: 56px;">
-                <a href="" class="button-masuk" style="font-weight: bold">Masuk</a>
-            </div>
-            <div class="form-group mt-4 text-center">
-                <p>Belum punya akun? <a href=" {{ route('register.daftar') }}" style="text-decoration: none; color:#068113; font-weight: bold;">Daftar disini</a></p>
-            </div>
+            <button type="submit" class="btnMasuk">Masuk</button>
         </div>
     </form>
 
@@ -92,7 +106,7 @@
         const togglePassword = document.getElementById('togglePassword');
         const password = document.getElementById('password');
 
-        togglePassword.addEventListener('click', function () {
+        togglePassword.addEventListener('click', function() {
             const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
             password.setAttribute('type', type);
             togglePassword.classList.toggle('bi-eye');

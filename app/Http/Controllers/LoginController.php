@@ -16,7 +16,7 @@ class LoginController extends Controller
     public function masuk()
     {
         return view('login.masuk', [
-            'title' => 'halaman login',
+            'title' => 'Masuk',
         ]);
     }
 }
