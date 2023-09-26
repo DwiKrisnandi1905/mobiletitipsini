@@ -7,7 +7,7 @@
     <link rel="icon" href="{{ asset('img/logo1.png') }}" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <title>onBoarding</title>
+    <title>{{ $title }}</title>
 </head>
 <style>
     .container-onboarding {
