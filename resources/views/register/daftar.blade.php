@@ -221,7 +221,6 @@
                     <input type="password" id="Kata Sandi" name="password" class="form-control" placeholder="Min 8 Karakter">
                     <i id="password-toggle" class="bi bi-eye-slash"></i>
                 </div>
-                <div class="error-message" id="password-error">Kata sandi harus diisi</div>
             </div>
         <div class="form-group">
             <label for="password">Konfirmasi Kata Sandi</label>
@@ -229,7 +228,6 @@
                 <input type="password" id="Konfirmasi" name="confirmPassword" class="form-control" placeholder="Min 8 Karakter">
                 <i id="confirm-password-toggle" class="bi bi-eye-slash"></i>
             </div>
-            <div class="error-message" id="confirm-password-error">Konfirmasi kata sandi harus diisi</div>
         </div>
         <div class="form-group">
             <label for="telepon">Nomor Telefon</label>
@@ -305,7 +303,7 @@ daftarButton.addEventListener('click', () => {
         // Lanjutkan dengan proses pendaftaran atau tindakan lainnya
     }
 });
-    
+
 // Validasi saat input Email kehilangan fokus (blur)
 emailField.addEventListener('blur', () => {
     if (emailField.value === '') {
