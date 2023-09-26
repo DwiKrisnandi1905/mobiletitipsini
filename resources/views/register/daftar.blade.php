@@ -152,11 +152,11 @@
         <form>
             <div class="form-group">
                 <label for="nama">Email</label>
-                <input type="text" id="Email" name="nama" class="form-control" placeholder="Email">
+                <input type="email" id="Email" name="nama" class="form-control" placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="email">Kata Sandi</label>
-                <input type="email" id="Kata Sandi" name="email" class="form-control" placeholder="Min 8 Karakter">
+                <input type="password" id="Kata Sandi" name="email" class="form-control" placeholder="Min 8 Karakter">
             </div>
             <div class="form-group">
                 <label for="password">Konfirmasi Kata Sandi</label>
