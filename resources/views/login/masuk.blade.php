@@ -61,12 +61,12 @@
     <form action="" method="POST">
         <div class="container p-4">
             <div class="form-group">
-                <label for="email" class="form-label fw-bold">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" value="" placeholder="Masukkan Email" style="background-color: #e8f0fe;" required>
+                <label for="email" class="form-label fw-bold">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Masukkan Email" style="background-color: #e8f0fe;" required>
             </div>
             <div class="form-group mt-3">
                 <label for="password" class="form-label fw-bold">
-                    Kata Sandi:
+                    Kata Sandi
                 </label>
                 <div class="input-group">
                     <input type="password" id="password" name="password" class="form-control" placeholder="Masukkan Password" style="border-right: none; background-color: #e8f0fe;" required>
@@ -82,7 +82,7 @@
                 <a href="" class="button-masuk" style="font-weight: bold">Masuk</a>
             </div>
             <div class="form-group mt-4 text-center">
-                <p>Belum punya akun? <a href=" {{ route('register.daftar') }}" style="text-decoration: none; color:#068113; font-weight: bold;">Daftar Disini!</a></p>
+                <p>Belum punya akun? <a href=" {{ route('register.daftar') }}" style="text-decoration: none; color:#068113; font-weight: bold;">Daftar disini</a></p>
             </div>
         </div>
     </form>
