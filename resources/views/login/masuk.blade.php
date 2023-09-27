@@ -98,6 +98,9 @@
                 <a href="{{ route('forgot.index') }}" style="color: #068113; float: right; text-decoration: none;">Lupa Kata Sandi?</a>
             </div>
             <button type="submit" class="btnMasuk">Masuk</button>
+            <div class="form-group mt-4 text-center">
+                <p>Belum punya akun? <a href=" {{ route('register.daftar') }}" style="text-decoration: none; color:#068113; font-weight: bold;">Daftar disini</a></p>
+            </div>
         </div>
     </form>
 
